@@ -14,4 +14,4 @@ jobs:
       - uses: actions/checkout@v2
       - name: SAM Build
         shell: bash
-        run: echo ${{ job.test.environment }}
+        run: echo ${{ jobs.test.environment }}
