@@ -8,6 +8,5 @@ permissions:
   contents: read
 jobs:
   test:
+    environment: production
     uses: phitran/phi-test/.github/workflows/release.yml@main
-    with:
-      environment: dev

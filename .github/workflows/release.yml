@@ -15,4 +15,4 @@ jobs:
     name: Test
     steps:
       - name: Smart Event Unit Tests
-        run: echo test
+        run: echo ${{ inputs.environment }}
