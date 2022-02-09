@@ -16,4 +16,4 @@ runs:
   steps:
     - name: SAM Build
       shell: bash
-      run: echo ${{ inputs.environment }} ${{ inputs.target-env }} ${{ inputs.role-arn }}
+      run: echo ${{ github.environment }}
