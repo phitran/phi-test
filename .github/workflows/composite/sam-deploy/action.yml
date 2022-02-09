@@ -1,9 +1,6 @@
 name: "SAM Deploy"
 description: "Deploy SAM"
 inputs:
-  stack-name:
-    description: "CloudFormation stack name"
-    required: true
   target-env:
     description: "Target env. dev, stage, or prod"
     required: true
@@ -16,7 +13,9 @@ inputs:
     required: true
 runs:
   using: "composite"
+  env:
+    STACK_NAME: ${{ github.event.repository.name }}-${{ env.TARGET_ENV }}
   steps:
     - name: SAM Build
       shell: bash
-      run: echo ${{ inputs.environment }} ${{ inputs.stack-name }} ${{ inputs.target-env }} ${{ inputs.role-arn }}
+      run: echo ${{ env.STACK_NAME }} ${{ inputs.environment }} ${{ inputs.target-env }} ${{ inputs.role-arn }}
