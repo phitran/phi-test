@@ -8,5 +8,7 @@ permissions:
   contents: read
 jobs:
   test:
+    runs-on: ubuntu-latest
     environment: production
-    uses: phitran/phi-test/.github/workflows/release.yml@main
+    steps:
+      - uses: phitran/phi-test/.github/workflows/release.yml@main
