@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     steps:
-      - uses: phitran/phi-test/.github/workflows/release.yml@main
+      - uses: ./.github/workflows/release.yml
