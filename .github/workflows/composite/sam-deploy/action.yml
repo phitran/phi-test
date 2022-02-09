@@ -13,9 +13,7 @@ inputs:
     required: true
 runs:
   using: "composite"
-  env:
-    STACK_NAME: "${{ github.event.repository.name }}-${{ inputs.environment }}"
   steps:
     - name: SAM Build
       shell: bash
-      run: echo ${{ env.STACK_NAME }} ${{ inputs.environment }} ${{ inputs.target-env }} ${{ inputs.role-arn }}
+      run: echo ${{ inputs.environment }} ${{ inputs.target-env }} ${{ inputs.role-arn }}
