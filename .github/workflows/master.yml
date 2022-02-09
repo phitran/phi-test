@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: ./.github/workflows/composite/sam-deploy
-        stack-name: "stack-name"
-        target-env: "target-env"
-        role-arn: "role-arn"
+        with:
+          stack-name: "stack-name"
+          target-env: "target-env"
+          role-arn: "role-arn"
