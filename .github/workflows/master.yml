@@ -1,8 +1,8 @@
 name: Master CI/CD
 on:
   push:
-    tags:
-      - v*
+    branches:
+      - master
 permissions:
   id-token: write
   contents: read
