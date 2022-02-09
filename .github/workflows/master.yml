@@ -14,4 +14,4 @@ jobs:
       - uses: actions/checkout@v2
       - name: SAM Build
         shell: bash
-        run: echo ${{ github.environment }}
+        run: echo ${{ job.test.environment }}
