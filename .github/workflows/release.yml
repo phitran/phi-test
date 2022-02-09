@@ -1,6 +1,6 @@
 name: Deploy
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       environment:
         description: 'Environment to run job against'
@@ -15,4 +15,4 @@ jobs:
     name: Test
     steps:
       - name: Smart Event Unit Tests
-        run: echo ${{ inputs.environment }}
+        run: echo ${{ github.event.inputs.environment }}
