@@ -8,7 +8,6 @@ permissions:
   contents: read
 jobs:
   test:
-    environment: dev
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,3 +16,4 @@ jobs:
           stack-name: "stack-name"
           target-env: "target-env"
           role-arn: "role-arn"
+          environment: dev
