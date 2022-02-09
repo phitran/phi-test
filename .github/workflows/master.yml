@@ -9,4 +9,6 @@ permissions:
 jobs:
   test:
     environment: dev
-    uses: phitran/phi-test/.github/workflows/release.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: phitran/phi-test/.github/workflows/release.yml@main
