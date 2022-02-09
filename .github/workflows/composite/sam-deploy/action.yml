@@ -14,7 +14,7 @@ inputs:
 runs:
   using: "composite"
   env:
-    STACK_NAME: ${{ github.event.repository.name }}-${{ inputs.environment }}
+    STACK_NAME: "${{ github.event.repository.name }}-${{ inputs.environment }}"
   steps:
     - name: SAM Build
       shell: bash
