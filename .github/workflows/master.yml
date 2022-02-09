@@ -2,7 +2,7 @@ name: Master CI/CD
 on:
   push:
     branches:
-      - master
+      - main
 permissions:
   id-token: write
   contents: read
