@@ -11,7 +11,7 @@ jobs:
     environment: dev
     runs-on: ubuntu-latest
     steps:
-      - uses: .github/workflows/composite/sam-deploy
+      - uses: ./.github/workflows/composite/sam-deploy
         with:
           stack-name: "stack-name"
           target-env: "target-env"
